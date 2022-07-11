@@ -30,9 +30,9 @@ public class Task2 {
         driver.findElement(By.name("birthday_year")).sendKeys("1991");
         Thread.sleep(3000);
         driver.findElement(By.name("sex")).click();
-       // driver.findElement(By.name("sex")).sendKeys("Female");
-        //driver.findElement(By.className("_58mt")).sendKeys("custom");
-        driver.findElement(By.name("websubmit")).click();
-        Thread.sleep(3000);
+//       // driver.findElement(By.name("sex")).sendKeys("Female");
+//        //driver.findElement(By.className("_58mt")).sendKeys("custom");
+//        driver.findElement(By.name("websubmit")).click();
+//        Thread.sleep(3000);
     }
 }

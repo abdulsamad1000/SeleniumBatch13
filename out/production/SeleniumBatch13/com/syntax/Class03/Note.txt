@@ -1,0 +1,140 @@
+Selenium Class 3
+
+Why do we need Xpath and CSS Selector?
+-- developers may not provide all the locators in html
+-- by using xpath and css we can identify elements with any given attributes
+
+What is an Xpath?
+-- xpath is like a query language which helps us to identify elements
+uniquely on the web page
+
+Types of Xpath:
+Absolute Xpath --> starts from the starting node of the html
+                    it always starts with single slash (/)
+                    e.g /html/body/div/div/div
+
+Relative Xpath --> starts from any node in html
+                    it always starts with double slash (//)
+
+Syntax for relative xpath:
+//tagname[@attribute = 'attribute value']
+
+e.g. //input[@id = 'email']
+
+Identifying elements by its text:
+//tagname[text() = 'text value']
+
+
+This is A short note for xpath using of Advance xpath and CSS selector
+=======================================================================
+This is syntax for 8 locators
+e.g: id="name"
+//tagname[@attribute='attribute value']
+//input[@id='name']
+
+Note in CSS selector we can find the Id AND Classname
+with this Syntax
+for ID====> tagnane#idvalue
+e.g= input#email
+for classname==> tagname.classnamevalue
+e.g= input.button
+================================
+This is Syntax if we want to use text insted of locator or other attributes
+e.g:" Create new account
+//tagname[text()='the text']
+eg: //a[text()='Create new account']
+====================================================================
+This is Syntax if we want to find out if our attribute contains long name or text we use this
+ e.g: Connect with friends and other arround you in
+ the world we can just you as part of this wholw sentence.
+//tagname[contains(@attribut,'partial attribute value']
+e.g: //input[contains(text(),'Connect with friends']
+
+Note: Syntax for CSS selecort contains partial attribute
+this what we do for cotanis partial attribute
+tagname[attribute*='attribute partila']
+e.g= input[data-testid*='royal']
+============================================================================
+This is Syntax if our attributes contains long name e.g: email or phone number
+e.g:aria-label="Email"
+//tagname[contains(@attribute,'attribute value')]
+//input[contains(@aria-label,'Email')]
+=================================================================================
+This is Syntax if our attribute starts-with e.g placeholder
+e.g: placeholder="royal_email"
+//tagname[starts-with(@attribute,'attributes value starts word')]
+//input[starts-with(@data-testid,'royal')]
+
+Note: Syntax for CSS selector starts-with
+this what we will use when we locate elements with CSS selector
+Syntax===> tagname[attribute^=attribute starts with letter]
+e.g= input[data-testid ^='royal']
+=======================================================================
+Advance xpath syntax with folloing sibling
+when we use this Syntax when we have 2 elements which both are them i dentical which mean look the same or
+they are duplicate. in this Syntax we move farward or move ahead one step. note: we can also use this Syntax if we do not have
+a unique locators.
+//tagname[@attribute='attribute value']/following-sibiling::tagname
+e.g: //input[@id='calFromDate']/following-sibling::img
+if we have text then we use this syntax
+//tagname[text()='text']/following-sibling::tagname
+=================================================================
+Advance xpath syntax with preceding sibling
+when we use this syntax when we have dupicate elements and we do not have the locator to identify the elements then we need to use
+the preceding sibling which will give as the unique id to identfy the elements
+the syntax is
+//tagname[@attribute='attribute value']/preceding-sibling::tagname
+if it text then we use this syntax
+//tagname[text()='text']/preceding-sibling::tagname
+======================================================================================
+identifying elements by its ancestors:
+Syntax for finding elements by it Ancestor
+//input[@id = 'email']/ancestor::form
+==============================================================================================
+identifying elements by its index
+Syntax to find elements with index but this see really rear in the industry
+(//img[@class = 'ui-datepicker-trigger'])[2]
+===============================================================================================
+
+THIS IS A TEACHER NOTE
+//tagname[@attribute='attribte value]/following-sibling::tagname
+
+
+e.g. //a[text() = 'Create new account']
+//h2[text() = 'Connect with friends and the world around you on Facebook.']
+
+identifying elements by using contains method:
+//tagname[contains(@attribute, 'partial attribute value')]
+
+e.g. //input[contains(@placeholder, 'Email')]
+//h2[contains(text(), 'the world')]
+
+starts-with will identify elements by its partial starting value
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+
+e.g. //input[starts-with(@aria-label, 'Email')]
+
+ends-with was used in xpath 1.0, we are using 2.0 and this method is not available
+
+
+Advanced Xpath:
+is based on parent and child, sibling relationships
+
+identifying element by following sibling
+//tagname[@attribute = 'attribute value']/following-sibling::siblingTagname
+e.g //input[@id = 'calFromDate']/following-sibling::img
+//label[@for = 'leaveList_calFromDate']/following-sibling::img
+
+identifying elements by preceding siblings
+//tagname[@attribute = 'attribute value']/preceding-sibling::siblingTagname
+e.g //span[text() = '& Orders']/preceding-sibling::span
+
+identifying elements by its parent:
+//tagname[@attribute = 'attribute value']/parent::parentTagname
+//span[text() = '& Orders']/parent::a
+
+identifying elements by its ancestors:
+//input[@id = 'email']/ancestor::form
+
+identifying elements by its index
+(//img[@class = 'ui-datepicker-trigger'])[2]
