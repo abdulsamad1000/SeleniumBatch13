@@ -34,7 +34,7 @@ e.g: id="name"
 
 Note in CSS selector we can find the Id AND Classname
 with this Syntax
-for ID====> tagnane#idvalue
+for ID====> tagname#idvalue
 e.g= input#email
 for classname==> tagname.classnamevalue
 e.g= input.button
