@@ -22,7 +22,9 @@ public class dropdownPractice {
             String OptionText =Option.getText();
             System.out.println(OptionText);
         }
+        //NOTE
         //select.selectByValue("search-alias=appliances");
+
     }
 }
 

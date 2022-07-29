@@ -1,0 +1,7 @@
+Short note for window handling and handles
+in order to handle multiple window we need 2 method 1) get window handle  and 2) get window handles
+get window handle is an ID and get window handles is value
+window handle is the address for the specific window or tab
+the length of window handle is aprox 40 Alpah Numeric characters
+window handle stores the unique address of the browser in the windows
+window handle is a pointer to window as well

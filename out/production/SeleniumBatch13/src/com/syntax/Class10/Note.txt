@@ -1,0 +1,13 @@
+Selenium Class 10
+Calendars are also called as date pickers
+How to Handle Calendar:
+1. Click on the calendar
+2. locate the month and get text
+3. if the desired text is not visible --> we will keep clicking on and keep updating month text
+4. as soon as we find our desired text ---> grab all the Cells from the table
+5. loop through the cell
+6. one the cells value is matched with our condition --> click on the matched date
+
+Why do we need Screenshots in testing?
+Screenshots in testing it is very important to take screenshots in order to prove that our tests covered certain functionality.
+in order to take a screenshot in selenium we will be using Takes Screenshots interface

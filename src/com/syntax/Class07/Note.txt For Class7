@@ -1,0 +1,38 @@
+Selenium Class 7
+
+Handling multiple windows (tabs):
+In order to handle multiple windows we will be using:
+getWindowHandle()
+getWindowHandles()
+
+WindowHandle:
+is a unique ID that holds the address of the window or a tab
+It is approximately a 40 alphanumeric character ID
+
+the original page where you navigate will be called parent handle
+and additional tab opened afterwards will be called child handle
+
+Most of the time when you interact with links they will open a new tab or a window
+===========================================================================================
+
+what is Synchronization:
+is the process bringing the speed of two or more components to the same level
+in this case we are bringing our script and page load to the same speed level
+
+Threat.sleep() ---- static wait / unconditional wait
+Types of selenium waite
+We have 3 Types of selenium waite
+1) Implicit waits:
+2) Explicit waits:
+3) Fluent waits:
+
+what is Implicit wait:
+it tell the webdriver to wait until certian amount of time before throwing an exception
+it will only be written once  and will be applied to the whole session of the execution
+we can say the Implicit wait is a gloabl wait
+
+Implicit wait work with findelements() method
+Implicit wait is usually set for 20 seconds. if your element is found in any time between the given time the remaning time will be
+ingnored and you script will move on to the next line or to the next step
+
+if the element is not found in a given time, only then you will get an exception
