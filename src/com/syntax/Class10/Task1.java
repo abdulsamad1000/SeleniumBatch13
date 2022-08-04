@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +24,7 @@ import java.util.concurrent.TimeUnit;
      * click search
      * quit the browser   // Hum@nhrm123  // Admin
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
         WebDriver driver= new ChromeDriver();
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
@@ -85,6 +86,9 @@ import java.util.concurrent.TimeUnit;
         WebElement SubUnitSearchDropDown = driver.findElement(By.id("leaveList_cmbSubunit"));
         Select select4 = new Select(SubUnitSearchDropDown);
         select4.selectByVisibleText("IT Support");
+        TakesScreenshot takesScreenshot= (TakesScreenshot) driver;
+        File srcFile =takesScreenshot.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(srcFile, new File("screenshots/syntaxtechs/humanresurc/webPage.png"));
         // driver.quit();
     }
 
